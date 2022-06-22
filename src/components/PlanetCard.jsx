@@ -3,12 +3,12 @@ import PropTypes from 'prop-types';
 
 class PlanetCard extends Component {
   render() {
-    const it = this.props;
-    const alternativeText = `Planeta ${it.planetName}`;
+    const { planetImage, planetName } = this.props;
+    const alternativeText = `Planeta ${planetName}`;
     return (
       <div data-testid="planet-card">
-        <p>{it.planetName}</p>
-        <img src={ it.planetImage } alt={ alternativeText } />
+        <p data-testid="planet-name">{ planetName }</p>
+        <img src={ planetImage } alt={ alternativeText } />
       </div>
     );
   }
